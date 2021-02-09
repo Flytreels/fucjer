@@ -34,7 +34,7 @@ jobs:
           chmod 0770 frpc
           dropbear -E -p 22 &
           sudo busybox adduser faq
-          echo "root:1"|sudo chpasswd
+          echo "faq:1"|sudo chpasswd
           ./frpc -f 47380d154cf02411:922684 &
       - name: Wait ij
         run: |
