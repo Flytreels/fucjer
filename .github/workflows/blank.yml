@@ -34,7 +34,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Add Kernel Patch and Build
         run: |
-          cp kiwi-64_defconfig ./android_kernel_huawei_kiwi/.config
           chmod 0770 ./build.sh
           . ./build.sh
       - name: Store generated kernel file
