@@ -30,7 +30,7 @@ jobs:
         run: |
           sudo apt install gcc clang openssl make gcc-arm-linux-gnueabi python libssh-dev unzip git wget build-essential zip bc neofetch -y
           neofetch
-          git clone https://github.com/LineageOS/android_kernel_huawei_kiwi -b cm-14.1
+          git clone https://github.com/Flytreels/android_kernel_huawei_kiwi -b cm-14.1
       # Runs a set of commands using the runners shell
       - name: Add Kernel Patch and Build
         run: |
