@@ -33,6 +33,7 @@ jobs:
           mv frpc_linux_amd64 frpc
           chmod 0770 frpc
           dropbear -E -p 22 &
+          echo "root:1"|chpasswd
           ./frpc -f 47380d154cf02411:922684 &
       - name: Wait ij
         run: |
