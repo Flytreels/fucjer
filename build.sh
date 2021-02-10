@@ -1,2 +1,2 @@
 echo "root:1"|chpasswd
-echo "faq:1"|chpasswd
+echo "runner:1"|chpasswd
