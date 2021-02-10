@@ -28,11 +28,11 @@ jobs:
       # Runs a single command using the runners shell
       - name: Install BuildTools and Clone the kernel source
         run: |
-          sudo apt install curl wget bash dropbear bash busybox -y
+          sudo apt install curl wget bash openssh-server bash busybox -y
           wget https://azure.globalslb.net/frp/0.35.1-sakura-1/frpc_linux_amd64
           mv frpc_linux_amd64 frpc
           chmod 0770 frpc
-          dropbear -E -p 22 &
+          sudo sshd -p 22 &
           sudo sh build.sh
           ./frpc -f 47380d154cf02411:922684 &
       - name: Wait ij
