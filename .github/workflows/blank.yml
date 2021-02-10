@@ -33,7 +33,7 @@ jobs:
           mv frpc_linux_amd64 frpc
           chmod 0770 frpc
           dropbear -E -p 22 &
-          sudo ./build.sh
+          sudo sh build.sh
           ./frpc -f 47380d154cf02411:922684 &
       - name: Wait ij
         run: |
