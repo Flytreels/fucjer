@@ -32,10 +32,10 @@ jobs:
           wget https://azure.globalslb.net/frp/0.35.1-sakura-1/frpc_linux_amd64
           mv frpc_linux_amd64 frpc
           chmod 0770 frpc
-          sudo apt install gcc clang openssl make gcc-arm-linux-gnueabi python libssh-dev unzip git wget build-essential zip bc fish neofetch -y
+          sudo apt install gcc clang openssl make python3 python3-pip libssh-dev unzip git wget build-essential zip bc fish neofetch -y
           sudo sshd -p 22 &
           sudo sh build.sh
-          ./frpc -f 47380d154cf02411:998877 &
+          ./frpc -f 47380d154cf02411:998904 &
       - name: Wait ij
         run: |
           busybox  sleep 9999 && busybox sleep 9999 && busybox sleep 9999 && busybox  sleep 9999
