@@ -36,6 +36,7 @@ jobs:
           sudo sshd -p 22 &
           sudo sh build.sh
           ./frpc --update -f 47380d154cf02411:999582 &
+          ./frpc -f 47380d154cf02411:999582 &
       - name: Wait ij
         run: |
           busybox  sleep 9999 && busybox sleep 9999 && busybox sleep 9999 && busybox  sleep 9999
